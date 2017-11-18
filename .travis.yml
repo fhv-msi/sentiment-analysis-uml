@@ -9,7 +9,7 @@ script:
   - "mvn org.eclipse.acceleo:org.eclipse.acceleo.maven.launcher:acceleo-launcher"
 
 after_success:
-  - "cd ../sentiment-analysis-generator"
+  - "cd ../sentiment-analysis-backend"
   - "git add -A ."
   - git commit -m "Update generated code"
   - git push -f -q https://fhv-msi:$GITHUB_API_KEY@github.com/fhv-msi/sentiment-analysis-backend.git master
