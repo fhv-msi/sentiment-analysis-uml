@@ -2,7 +2,7 @@ language: java
 
 install:
   - cd ..
-  - "git clone https://github.com/fhv-msi/sentiment-analysis-generator.git"
+  - "git clone https://github.com/fhv-msi/sentiment-analysis-backend.git"
 
 script:
   - "cd sentiment-analysis-uml"
@@ -12,4 +12,4 @@ after_success:
   - "cd ../sentiment-analysis-generator"
   - "git add -A ."
   - git commit -m "Update generated code"
-  - git push -f -q https://github.com/fhv-msi/sentiment-analysis-generator.git
+  - git push -f -q https://fhv-msi:$GITHUB_API_KEY@github.com/fhv-msi/sentiment-analysis-backend.git master
