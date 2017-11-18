@@ -30,6 +30,14 @@
 			<id>Eclipse - Acceleo Release</id>
 			<url>https://repo.eclipse.org/content/repositories/acceleo-releases</url>
 		</repository>
+		<repository>
+			<id>packagecloud-fhv-msi</id>
+			<url>https://packagecloud.io/fhv-msi/sentiment_analysis</url>
+		</repository>
+		<snapshotRepository>
+			<id>packagecloud-fhv-msi</id>
+			<url>https://packagecloud.io/fhv-msi/sentiment_analysis</url>
+		</snapshotRepository>
 	</repositories>
 
 	<pluginRepositories>
