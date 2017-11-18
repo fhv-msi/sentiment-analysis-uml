@@ -1,8 +1,15 @@
 language: java
 
 install:
-  - cd .. && git clone https://github.com/fhv-msi/sentiment-analysis-generator.git
+  - cd ..
+  - "git clone https://github.com/fhv-msi/sentiment-analysis-generator.git"
 
 script:
-  - "ls -ltr"
-  - "cd .. && ls -ltr"
+  - "cd sentiment-analysis-uml"
+  - "mvn org.eclipse.acceleo:org.eclipse.acceleo.maven.launcher:acceleo-launcher"
+
+after_success:
+  - "cd ../sentiment-analysis-generator"
+  - "git add -A ."
+  - git commit -m "Update generated code"
+  - git push -f -q https://github.com/fhv-msi/sentiment-analysis-generator.git
